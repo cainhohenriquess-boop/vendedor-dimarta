@@ -113,6 +113,12 @@ export function ProductForm({
           try {
             let finalImageUrl = values.imageUrl?.trim();
 
+            if (selectedFile && !uploadEnabled) {
+              throw new Error(
+                "Upload por arquivo indisponível. Configure BLOB_READ_WRITE_TOKEN ou informe a URL da imagem.",
+              );
+            }
+
             if (selectedFile) {
               finalImageUrl = await uploadProductImage(selectedFile);
             }
@@ -345,13 +351,20 @@ export function ProductForm({
               <label className="mb-2 block text-sm font-semibold text-slate-700">
                 Upload de arquivo
               </label>
-              <label className="flex cursor-pointer items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-600 transition hover:border-primary/30 hover:bg-primary/5">
+              <label
+                className={`flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-600 transition ${
+                  uploadEnabled
+                    ? "cursor-pointer hover:border-primary/30 hover:bg-primary/5"
+                    : "cursor-not-allowed opacity-60"
+                }`}
+              >
                 <UploadCloud className="size-4 text-primary" />
                 {selectedFile ? selectedFile.name : "Selecionar imagem"}
                 <input
                   type="file"
                   accept="image/*"
                   className="hidden"
+                  disabled={!uploadEnabled}
                   onChange={(event) =>
                     setSelectedFile(event.target.files?.[0] ?? null)
                   }
