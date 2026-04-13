@@ -1,0 +1,10 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#FFF1F2"/>
+  <rect x="84" y="84" width="1032" height="732" rx="56" fill="#FFFFFF"/>
+  <path d="M290 590C396 522 492 486 584 486C687 486 776 542 868 578C901 592 940 600 978 604V666H222C231 628 247 612 290 590Z" fill="#F5D0C5"/>
+  <path d="M514 454C541 424 577 404 620 404C663 404 700 424 732 458" stroke="#FB7185" stroke-width="24" stroke-linecap="round"/>
+  <circle cx="338" cy="646" r="38" fill="#EAB3A4"/>
+  <circle cx="846" cy="646" r="38" fill="#EAB3A4"/>
+  <text x="600" y="232" text-anchor="middle" fill="#9F1239" font-size="64" font-family="Arial, sans-serif" font-weight="700">Moleca</text>
+  <text x="600" y="300" text-anchor="middle" fill="#BE123C" font-size="28" font-family="Arial, sans-serif">Chinelo nude</text>
+</svg>

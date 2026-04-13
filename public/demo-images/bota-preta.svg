@@ -1,0 +1,11 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#F8FAFC"/>
+  <rect x="84" y="84" width="1032" height="732" rx="56" fill="#FFFFFF"/>
+  <path d="M382 314H632V548C632 612 582 664 518 664H432C404 664 382 642 382 614V314Z" fill="#111827"/>
+  <path d="M612 452C692 452 752 520 842 550C896 568 934 574 980 580V648H564V518C564 481 582 452 612 452Z" fill="#1F2937"/>
+  <rect x="420" y="372" width="162" height="54" rx="16" fill="#334155"/>
+  <circle cx="434" cy="680" r="34" fill="#111827"/>
+  <circle cx="828" cy="680" r="34" fill="#111827"/>
+  <text x="600" y="232" text-anchor="middle" fill="#111827" font-size="64" font-family="Arial, sans-serif" font-weight="700">Via Marte</text>
+  <text x="600" y="300" text-anchor="middle" fill="#475569" font-size="28" font-family="Arial, sans-serif">Bota preta</text>
+</svg>

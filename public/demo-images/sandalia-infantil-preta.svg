@@ -1,0 +1,11 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#ECFDF5"/>
+  <rect x="84" y="84" width="1032" height="732" rx="56" fill="#FFFFFF"/>
+  <path d="M248 572C386 506 483 458 566 458C689 458 752 524 838 566C876 584 930 590 986 596V662H216C222 620 232 596 248 572Z" fill="#111827"/>
+  <path d="M458 402C520 374 584 360 646 360C712 360 770 378 824 414" stroke="#4B5563" stroke-width="26" stroke-linecap="round"/>
+  <rect x="572" y="346" width="126" height="46" rx="20" fill="#10B981"/>
+  <circle cx="316" cy="646" r="42" fill="#111827"/>
+  <circle cx="836" cy="646" r="42" fill="#111827"/>
+  <text x="600" y="232" text-anchor="middle" fill="#065F46" font-size="64" font-family="Arial, sans-serif" font-weight="700">Klin</text>
+  <text x="600" y="300" text-anchor="middle" fill="#047857" font-size="28" font-family="Arial, sans-serif">Sandalia infantil preta</text>
+</svg>

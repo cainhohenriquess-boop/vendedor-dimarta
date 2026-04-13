@@ -1,0 +1,10 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#F7F2EA"/>
+  <rect x="96" y="96" width="1008" height="708" rx="48" fill="#FFFFFF"/>
+  <path d="M280 566C400 492 469 446 563 446C684 446 744 514 840 548C891 566 935 576 980 584V650H220C226 615 239 589 280 566Z" fill="#0F766E"/>
+  <path d="M496 458C540 430 597 410 650 410C711 410 761 438 810 476" stroke="#134E4A" stroke-width="30" stroke-linecap="round"/>
+  <circle cx="327" cy="640" r="44" fill="#0B5E58"/>
+  <circle cx="839" cy="640" r="44" fill="#0B5E58"/>
+  <text x="600" y="230" text-anchor="middle" fill="#172033" font-size="64" font-family="Arial, sans-serif" font-weight="700">Dimarta</text>
+  <text x="600" y="300" text-anchor="middle" fill="#64748B" font-size="28" font-family="Arial, sans-serif">Imagem padrao do produto</text>
+</svg>

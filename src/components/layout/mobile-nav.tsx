@@ -1,0 +1,43 @@
+"use client";
+
+import { LayoutGrid, PackageSearch, PlusSquare } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { NAV_ITEMS } from "@/lib/constants";
+import { cn } from "@/lib/utils";
+
+const icons = [LayoutGrid, PackageSearch, PlusSquare];
+
+export function MobileNav() {
+  const pathname = usePathname();
+
+  return (
+    <div className="fixed inset-x-4 bottom-4 z-40 md:hidden">
+      <div className="surface-card grid grid-cols-3 p-2">
+        {NAV_ITEMS.map((item, index) => {
+          const Icon = icons[index];
+          const isActive =
+            item.href === "/"
+              ? pathname === item.href
+              : pathname === item.href || pathname.startsWith(`${item.href}/`);
+
+          return (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={cn(
+                "flex flex-col items-center justify-center gap-1 rounded-2xl px-2 py-3 text-xs font-semibold transition",
+                isActive
+                  ? "bg-slate-900 text-white"
+                  : "text-slate-500 hover:bg-slate-100",
+              )}
+            >
+              <Icon className="size-4" />
+              {item.label}
+            </Link>
+          );
+        })}
+      </div>
+    </div>
+  );
+}

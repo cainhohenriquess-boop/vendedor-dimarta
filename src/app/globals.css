@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f4ee;
+  --foreground: #172033;
+  --card: rgba(255, 255, 255, 0.82);
+  --card-strong: #ffffff;
+  --muted: #64748b;
+  --border: rgba(148, 163, 184, 0.22);
+  --ring: rgba(13, 148, 136, 0.28);
+  --primary: #0f766e;
+  --primary-foreground: #f8fafc;
+  --secondary: #fff7ed;
+  --secondary-foreground: #9a3412;
+  --accent: #f59e0b;
+  --danger: #dc2626;
+  --success: #15803d;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-strong: var(--card-strong);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-danger: var(--danger);
+  --color-success: var(--success);
+  --font-sans: var(--font-manrope);
+  --font-display: var(--font-archivo);
+}
+
+*,
+*::before,
+*::after {
+  border-color: var(--border);
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(245, 158, 11, 0.14), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(15, 118, 110, 0.12), transparent 38%),
+    linear-gradient(180deg, #fbfaf7 0%, #f4efe6 100%);
+  color: var(--foreground);
+}
+
+::selection {
+  background: rgba(15, 118, 110, 0.18);
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-archivo);
+    letter-spacing: -0.03em;
+  }
+}
+
+@layer utilities {
+  .surface-card {
+    @apply rounded-3xl border border-white/60 bg-white/80 shadow-[0_24px_60px_-36px_rgba(15,23,42,0.42)] backdrop-blur;
+  }
+
+  .surface-subtle {
+    @apply rounded-2xl border border-slate-200/70 bg-white/70 backdrop-blur;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}

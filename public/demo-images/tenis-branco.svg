@@ -1,0 +1,12 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#EFF6FF"/>
+  <rect x="84" y="84" width="1032" height="732" rx="56" fill="#FFFFFF"/>
+  <path d="M232 588C356 514 454 458 558 458C701 458 790 554 900 588C925 596 957 602 990 604V668H202C205 638 210 610 232 588Z" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="14"/>
+  <path d="M446 398C505 370 574 354 648 354C725 354 787 378 842 430" stroke="#94A3B8" stroke-width="28" stroke-linecap="round"/>
+  <path d="M522 474H756" stroke="#CBD5E1" stroke-width="22" stroke-linecap="round"/>
+  <path d="M494 514H790" stroke="#CBD5E1" stroke-width="22" stroke-linecap="round"/>
+  <circle cx="306" cy="648" r="42" fill="#94A3B8"/>
+  <circle cx="866" cy="648" r="42" fill="#94A3B8"/>
+  <text x="600" y="232" text-anchor="middle" fill="#1D4ED8" font-size="64" font-family="Arial, sans-serif" font-weight="700">Beira Rio</text>
+  <text x="600" y="300" text-anchor="middle" fill="#475569" font-size="28" font-family="Arial, sans-serif">Tenis casual branco</text>
+</svg>
