@@ -8,11 +8,7 @@ import { SizesBadges } from "@/components/products/sizes-badges";
 import { PageHeader } from "@/components/layout/page-header";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
-import {
-  formatCurrencyBRL,
-  formatDateTime,
-  formatNumber,
-} from "@/lib/utils";
+import { formatCurrencyBRL, formatDateTime, formatNumber } from "@/lib/utils";
 import { getProductById } from "@/server/queries/products";
 
 export const dynamic = "force-dynamic";
@@ -38,7 +34,7 @@ export default async function ProductDetailsPage({
       <PageHeader
         eyebrow="Detalhes"
         title={product.model}
-        description="Leitura rápida das informações essenciais para atendimento: preço, estoque, numerações, código interno e status."
+        description="Leitura rápida das informações essenciais para atendimento: preço, estoque, numerações, cor e status."
         actions={
           <>
             <Link href="/products" className={buttonVariants({ variant: "outline" })}>
@@ -90,9 +86,6 @@ export default async function ProductDetailsPage({
             <h2 className="font-display text-3xl font-semibold text-slate-900">
               {product.model}
             </h2>
-            <p className="mt-3 text-sm leading-7 text-slate-500">
-              {product.shortDescription}
-            </p>
           </div>
         </section>
 
@@ -117,15 +110,7 @@ export default async function ProductDetailsPage({
             )}
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2">
-            <div className="surface-card p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
-                Código interno
-              </p>
-              <p className="mt-2 text-base font-semibold text-slate-900">
-                {product.internalCode}
-              </p>
-            </div>
+          <div className="grid gap-4 md:grid-cols-3">
             <div className="surface-card p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
                 Cor

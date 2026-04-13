@@ -52,9 +52,6 @@ export function ProductCard({ product }: ProductCardProps) {
                 <h3 className="font-display text-2xl font-semibold text-slate-900">
                   {product.model}
                 </h3>
-                <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-500">
-                  {product.shortDescription}
-                </p>
               </div>
             </div>
 
@@ -79,20 +76,12 @@ export function ProductCard({ product }: ProductCardProps) {
             </div>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-4 md:grid-cols-3">
             <div className="surface-subtle p-4">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
                 Cor
               </p>
               <p className="mt-2 text-sm font-semibold text-slate-800">{product.color}</p>
-            </div>
-            <div className="surface-subtle p-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
-                Código
-              </p>
-              <p className="mt-2 text-sm font-semibold text-slate-800">
-                {product.internalCode}
-              </p>
             </div>
             <div className="surface-subtle p-4">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">

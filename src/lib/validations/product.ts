@@ -1,9 +1,9 @@
 import { ProductAudience, ProductStatus } from "@prisma/client";
+import { z } from "zod";
 import {
   CREATE_NEW_OPTION_VALUE,
   DEFAULT_PRODUCT_IMAGE,
 } from "@/lib/constants";
-import { z } from "zod";
 
 const sizeSchema = z.object({
   size: z.number().int().min(15).max(50),
@@ -18,26 +18,12 @@ export const productFormSchema = z
     newCategoryName: z.string().trim().max(80).optional(),
     newBrandName: z.string().trim().max(80).optional(),
     model: z.string().trim().min(2, "Informe o modelo.").max(120),
-    shortDescription: z
-      .string()
-      .trim()
-      .min(4, "Informe uma descrição curta.")
-      .max(180),
     color: z.string().trim().min(2, "Informe a cor.").max(80),
     currentPrice: z.number().positive("Informe um preço atual válido."),
     promotionalPrice: z
       .number()
       .positive("Informe um preço promocional válido.")
       .optional(),
-    internalCode: z
-      .string()
-      .trim()
-      .min(3, "Informe o código interno.")
-      .max(40)
-      .regex(
-        /^[A-Za-z0-9-_]+$/,
-        "Use apenas letras, números, hífen e underscore no código.",
-      ),
     imageUrl: z
       .string()
       .trim()
@@ -123,11 +109,9 @@ export const defaultProductValues: ProductFormValues = {
   newCategoryName: "",
   newBrandName: "",
   model: "",
-  shortDescription: "",
   color: "",
   currentPrice: 0,
   promotionalPrice: undefined,
-  internalCode: "",
   imageUrl: DEFAULT_PRODUCT_IMAGE,
   status: ProductStatus.ACTIVE,
   sizes: [{ size: 34, stock: 0 }],

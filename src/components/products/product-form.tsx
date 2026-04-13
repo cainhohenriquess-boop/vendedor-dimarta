@@ -11,7 +11,6 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select } from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
 import {
   CREATE_NEW_OPTION_VALUE,
   DEFAULT_PRODUCT_IMAGE,
@@ -167,8 +166,8 @@ export function ProductForm({
             Dados principais
           </h2>
           <p className="text-sm leading-6 text-slate-500">
-            Campos estruturados para facilitar busca, filtros e evolução futura do
-            catálogo.
+            Preencha apenas os campos essenciais para manter o cadastro rápido no
+            balcão.
           </p>
         </div>
 
@@ -262,18 +261,7 @@ export function ProductForm({
             <FieldError message={errors.model?.message} />
           </div>
 
-          <div>
-            <label className="mb-2 block text-sm font-semibold text-slate-700">
-              Código interno
-            </label>
-            <Input
-              placeholder="Ex.: MOL-RAS-001"
-              {...register("internalCode")}
-            />
-            <FieldError message={errors.internalCode?.message} />
-          </div>
-
-          <div>
+          <div className="md:col-span-2">
             <label className="mb-2 block text-sm font-semibold text-slate-700">
               Cor
             </label>
@@ -283,30 +271,18 @@ export function ProductForm({
         </div>
       </section>
 
-      <section className="grid gap-6 xl:grid-cols-[1.1fr_0.9fr]">
+      <section className="grid gap-6 xl:grid-cols-[0.85fr_1.15fr]">
         <div className="surface-card space-y-5 p-6">
           <div className="space-y-1">
             <h2 className="font-display text-2xl font-semibold text-slate-900">
-              Descrição e preço
+              Preços
             </h2>
             <p className="text-sm leading-6 text-slate-500">
-              Informações de atendimento rápido para o vendedor consultar no
-              balcão.
+              Informe o valor atual e, se houver, o preço promocional.
             </p>
           </div>
 
-          <div>
-            <label className="mb-2 block text-sm font-semibold text-slate-700">
-              Descrição curta
-            </label>
-            <Textarea
-              placeholder="Resumo objetivo do produto, material ou diferencial."
-              {...register("shortDescription")}
-            />
-            <FieldError message={errors.shortDescription?.message} />
-          </div>
-
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-1">
             <div>
               <label className="mb-2 block text-sm font-semibold text-slate-700">
                 Preço atual

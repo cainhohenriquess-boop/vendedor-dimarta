@@ -27,7 +27,7 @@ export default async function ProductsPage({
       <PageHeader
         eyebrow="Catálogo"
         title="Consulta rápida de produtos"
-        description="Pesquise por marca, modelo, categoria, cor, código interno ou numeração. Use os filtros combinados para encontrar o item certo durante o atendimento."
+        description="Pesquise por marca, modelo, categoria, cor ou numeração. Use os filtros combinados para encontrar o item certo durante o atendimento."
       />
 
       <FilterBar filters={filters} options={options} total={products.length} />

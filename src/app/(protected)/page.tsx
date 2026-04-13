@@ -89,14 +89,9 @@ export default async function DashboardPage() {
                 ) : null}
               </div>
 
-              <div>
-                <h3 className="font-display text-xl font-semibold text-slate-900">
-                  {product.model}
-                </h3>
-                <p className="mt-2 text-sm leading-6 text-slate-500">
-                  {product.shortDescription}
-                </p>
-              </div>
+              <h3 className="font-display text-xl font-semibold text-slate-900">
+                {product.model}
+              </h3>
 
               <div className="grid gap-3 sm:grid-cols-3">
                 <div>

@@ -44,11 +44,9 @@ export type ProductFormDefaults = {
   newCategoryName?: string;
   newBrandName?: string;
   model: string;
-  shortDescription: string;
   color: string;
   currentPrice: number;
   promotionalPrice?: number;
-  internalCode: string;
   imageUrl: string;
   status: ProductStatus;
   sizes: ProductSizeItem[];

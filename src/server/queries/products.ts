@@ -364,13 +364,11 @@ export async function getProductForEdit(id: string): Promise<ProductFormDefaults
     newCategoryName: "",
     newBrandName: "",
     model: product.model,
-    shortDescription: product.shortDescription,
     color: product.color,
     currentPrice: Number(product.currentPrice),
     promotionalPrice: product.promotionalPrice
       ? Number(product.promotionalPrice)
       : undefined,
-    internalCode: product.internalCode,
     imageUrl: product.imageUrl,
     status: product.status,
     sizes: product.sizes,

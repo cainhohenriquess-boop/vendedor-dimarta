@@ -1,8 +1,8 @@
 import { Prisma } from "@prisma/client";
-import { CREATE_NEW_OPTION_VALUE } from "@/lib/constants";
 import prisma from "@/lib/prisma";
 import { buildProductSearchDocument } from "@/lib/search";
 import { slugify } from "@/lib/utils";
+import { CREATE_NEW_OPTION_VALUE } from "@/lib/constants";
 import {
   productFormSchema,
   type ProductFormInput,
@@ -13,7 +13,6 @@ function normalizeProductInput(input: ProductFormInput) {
 
   return {
     ...parsed,
-    internalCode: parsed.internalCode.toUpperCase(),
     promotionalPrice: parsed.promotionalPrice ?? null,
     sizes: [...parsed.sizes].sort((left, right) => left.size - right.size),
   };
@@ -73,26 +72,59 @@ async function getReferences(
   };
 }
 
+function buildAutomaticShortDescription(
+  values: ReturnType<typeof normalizeProductInput>,
+  references: Awaited<ReturnType<typeof getReferences>>,
+) {
+  return `${references.category.name} ${values.model} da marca ${references.brand.name} na cor ${values.color}.`;
+}
+
+function buildInternalCode(
+  references: Awaited<ReturnType<typeof getReferences>>,
+  existingCode?: string,
+) {
+  if (existingCode) {
+    return existingCode;
+  }
+
+  const brandPrefix = slugify(references.brand.name)
+    .replace(/-/g, "")
+    .slice(0, 3)
+    .toUpperCase()
+    .padEnd(3, "X");
+  const categoryPrefix = slugify(references.category.name)
+    .replace(/-/g, "")
+    .slice(0, 3)
+    .toUpperCase()
+    .padEnd(3, "X");
+  const randomSuffix = crypto.randomUUID().slice(0, 6).toUpperCase();
+
+  return `DM-${brandPrefix}-${categoryPrefix}-${randomSuffix}`;
+}
+
 function buildBaseProductData(
   values: ReturnType<typeof normalizeProductInput>,
   references: Awaited<ReturnType<typeof getReferences>>,
   userId: string,
+  existingCode?: string,
 ) {
   const totalStock = values.sizes.reduce((total, size) => total + size.stock, 0);
+  const shortDescription = buildAutomaticShortDescription(values, references);
+  const internalCode = buildInternalCode(references, existingCode);
 
   return {
     audience: values.audience,
     categoryId: references.category.id,
     brandId: references.brand.id,
     model: values.model,
-    shortDescription: values.shortDescription,
+    shortDescription,
     color: values.color,
     currentPrice: toDecimal(values.currentPrice),
     promotionalPrice:
       typeof values.promotionalPrice === "number"
         ? toDecimal(values.promotionalPrice)
         : null,
-    internalCode: values.internalCode,
+    internalCode,
     imageUrl: values.imageUrl,
     status: values.status,
     totalStock,
@@ -101,9 +133,9 @@ function buildBaseProductData(
       brandName: references.brand.name,
       categoryName: references.category.name,
       model: values.model,
-      shortDescription: values.shortDescription,
+      shortDescription,
       color: values.color,
-      internalCode: values.internalCode,
+      internalCode,
       sizes: values.sizes.map((size) => size.size),
     }),
     updatedById: userId,
@@ -140,8 +172,21 @@ export async function updateProduct(
   const values = normalizeProductInput(input);
 
   return prisma.$transaction(async (tx) => {
+    const existingProduct = await tx.product.findUniqueOrThrow({
+      where: {
+        id: productId,
+      },
+      select: {
+        internalCode: true,
+      },
+    });
     const references = await getReferences(tx, values);
-    const baseData = buildBaseProductData(values, references, userId);
+    const baseData = buildBaseProductData(
+      values,
+      references,
+      userId,
+      existingProduct.internalCode,
+    );
 
     return tx.product.update({
       where: {
