@@ -21,7 +21,7 @@ export function LogoutButton() {
           });
 
           if (!response.ok) {
-            toast.error("Nao foi possivel encerrar a sessao.");
+            toast.error("Não foi possível encerrar a sessão.");
             return;
           }
 

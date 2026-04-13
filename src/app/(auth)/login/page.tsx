@@ -38,13 +38,13 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
 
             <div className="space-y-4">
               <h1 className="max-w-3xl font-display text-4xl font-semibold leading-tight text-slate-900 sm:text-5xl">
-                {APP_NAME} para vendedores consultarem preco e estoque sem perder
-                tempo no balcao.
+                {APP_NAME} para vendedores consultarem preço e estoque sem perder
+                tempo no balcão.
               </h1>
               <p className="max-w-2xl text-base leading-8 text-slate-500">
                 Sistema web profissional para cadastrar, buscar e visualizar
-                produtos de forma rapida durante o atendimento da loja de
-                calcados.
+                produtos de forma rápida durante o atendimento da loja de
+                calçados.
               </p>
             </div>
           </div>
@@ -53,19 +53,19 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
             <div className="surface-subtle p-5">
               <p className="text-3xl font-semibold text-slate-900">1</p>
               <p className="mt-2 text-sm leading-6 text-slate-500">
-                Busca sempre visivel para encontrar produtos em segundos.
+                Busca sempre visível para encontrar produtos em segundos.
               </p>
             </div>
             <div className="surface-subtle p-5">
               <p className="text-3xl font-semibold text-slate-900">2</p>
               <p className="mt-2 text-sm leading-6 text-slate-500">
-                Preco e promocao em destaque para atendimento rapido.
+                Preço e promoção em destaque para atendimento rápido.
               </p>
             </div>
             <div className="surface-subtle p-5">
               <p className="text-3xl font-semibold text-slate-900">3</p>
               <p className="mt-2 text-sm leading-6 text-slate-500">
-                Cadastro organizado para crescer com a operacao da loja.
+                Cadastro organizado para crescer com a operação da loja.
               </p>
             </div>
           </div>

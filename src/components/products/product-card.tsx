@@ -34,7 +34,7 @@ export function ProductCard({ product }: ProductCardProps) {
           />
           {isOnPromotion ? (
             <Badge className="absolute left-4 top-4 bg-amber-400 text-amber-950">
-              Promocao
+              Promoção
             </Badge>
           ) : null}
         </div>
@@ -60,7 +60,7 @@ export function ProductCard({ product }: ProductCardProps) {
 
             <div className="surface-subtle min-w-44 p-4">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
-                Preco
+                Preço
               </p>
               {isOnPromotion ? (
                 <>
@@ -88,7 +88,7 @@ export function ProductCard({ product }: ProductCardProps) {
             </div>
             <div className="surface-subtle p-4">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
-                Codigo
+                Código
               </p>
               <p className="mt-2 text-sm font-semibold text-slate-800">
                 {product.internalCode}
@@ -104,10 +104,10 @@ export function ProductCard({ product }: ProductCardProps) {
             </div>
             <div className="surface-subtle p-4">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
-                Publico
+                Público
               </p>
               <p className="mt-2 text-sm font-semibold text-slate-800">
-                {product.audience === "ADULTO" ? "Adulto" : "Crianca"}
+                {product.audience === "ADULTO" ? "Adulto" : "Criança"}
               </p>
             </div>
           </div>
@@ -115,7 +115,7 @@ export function ProductCard({ product }: ProductCardProps) {
           <div className="space-y-3">
             <div className="flex items-center gap-2 text-sm font-semibold text-slate-700">
               <Package2 className="size-4 text-primary" />
-              Numeracoes e estoque
+              Numerações e estoque
             </div>
             <SizesBadges sizes={product.sizes} />
           </div>

@@ -30,7 +30,7 @@ export function FilterBar({ filters, options, total }: FilterBarProps) {
       <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
         <div className="min-w-0 flex-1">
           <label className="mb-2 block text-sm font-semibold text-slate-700" htmlFor="q">
-            Busca rapida
+            Busca rápida
           </label>
           <Input
             id="q"
@@ -64,12 +64,12 @@ export function FilterBar({ filters, options, total }: FilterBarProps) {
       <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
         <div className="space-y-2">
           <label className="text-sm font-medium text-slate-600" htmlFor="audience">
-            Publico
+            Público
           </label>
           <Select id="audience" name="audience" defaultValue={filters.audience ?? ""}>
             <option value="">Todos</option>
             <option value="ADULTO">Adulto</option>
-            <option value="CRIANCA">Crianca</option>
+            <option value="CRIANCA">Criança</option>
           </Select>
         </div>
 
@@ -136,7 +136,7 @@ export function FilterBar({ filters, options, total }: FilterBarProps) {
 
         <div className="space-y-2">
           <label className="text-sm font-medium text-slate-600" htmlFor="size">
-            Numeracao
+            Numeração
           </label>
           <Input
             id="size"
@@ -151,7 +151,7 @@ export function FilterBar({ filters, options, total }: FilterBarProps) {
 
         <div className="space-y-2">
           <label className="text-sm font-medium text-slate-600" htmlFor="minPrice">
-            Faixa de preco
+            Faixa de preço
           </label>
           <div className="grid grid-cols-2 gap-3">
             <Input
@@ -183,7 +183,7 @@ export function FilterBar({ filters, options, total }: FilterBarProps) {
               value="true"
               defaultChecked={filters.promotion}
             />
-            Apenas promocao
+            Apenas promoção
           </label>
 
           <label className="inline-flex items-center gap-2 text-sm font-medium text-slate-600">
@@ -201,7 +201,7 @@ export function FilterBar({ filters, options, total }: FilterBarProps) {
 
       <div className="flex flex-wrap items-center justify-between gap-3 border-t border-slate-200 pt-4">
         <p className="text-sm text-slate-500">
-          {total} produto(s) encontrado(s) para consulta rapida.
+          {total} produto(s) encontrado(s) para consulta rápida.
         </p>
         <p className="text-xs uppercase tracking-[0.18em] text-slate-400">
           Busca e filtros funcionam juntos

@@ -1,5 +1,8 @@
 import { ProductAudience, ProductStatus } from "@prisma/client";
-import { DEFAULT_PRODUCT_IMAGE } from "@/lib/constants";
+import {
+  CREATE_NEW_OPTION_VALUE,
+  DEFAULT_PRODUCT_IMAGE,
+} from "@/lib/constants";
 import { z } from "zod";
 
 const sizeSchema = z.object({
@@ -10,28 +13,30 @@ const sizeSchema = z.object({
 export const productFormSchema = z
   .object({
     audience: z.nativeEnum(ProductAudience),
-    categoryId: z.string().trim().min(1, "Selecione a categoria."),
-    brandId: z.string().trim().min(1, "Selecione a marca."),
+    categoryId: z.string().trim(),
+    brandId: z.string().trim(),
+    newCategoryName: z.string().trim().max(80).optional(),
+    newBrandName: z.string().trim().max(80).optional(),
     model: z.string().trim().min(2, "Informe o modelo.").max(120),
     shortDescription: z
       .string()
       .trim()
-      .min(4, "Informe uma descricao curta.")
+      .min(4, "Informe uma descrição curta.")
       .max(180),
     color: z.string().trim().min(2, "Informe a cor.").max(80),
-    currentPrice: z.number().positive("Informe um preco atual valido."),
+    currentPrice: z.number().positive("Informe um preço atual válido."),
     promotionalPrice: z
       .number()
-      .positive("Informe um preco promocional valido.")
+      .positive("Informe um preço promocional válido.")
       .optional(),
     internalCode: z
       .string()
       .trim()
-      .min(3, "Informe o codigo interno.")
+      .min(3, "Informe o código interno.")
       .max(40)
       .regex(
         /^[A-Za-z0-9-_]+$/,
-        "Use apenas letras, numeros, hifen e underscore no codigo.",
+        "Use apenas letras, números, hífen e underscore no código.",
       ),
     imageUrl: z
       .string()
@@ -39,19 +44,56 @@ export const productFormSchema = z
       .min(1, "Adicione uma imagem.")
       .refine(
         (value) => value.startsWith("/") || /^https?:\/\//.test(value),
-        "Informe uma URL valida ou envie um arquivo.",
+        "Informe uma URL válida ou envie um arquivo.",
       ),
     status: z.nativeEnum(ProductStatus),
-    sizes: z.array(sizeSchema).min(1, "Adicione ao menos uma numeracao."),
+    sizes: z.array(sizeSchema).min(1, "Adicione ao menos uma numeração."),
   })
   .superRefine((value, context) => {
+    const categoryId = value.categoryId.trim();
+    const brandId = value.brandId.trim();
+    const newCategoryName = value.newCategoryName?.trim();
+    const newBrandName = value.newBrandName?.trim();
+
+    if (!categoryId) {
+      context.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: "Selecione uma categoria ou cadastre uma nova.",
+        path: ["categoryId"],
+      });
+    }
+
+    if (categoryId === CREATE_NEW_OPTION_VALUE && !newCategoryName) {
+      context.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: "Informe o nome da nova categoria.",
+        path: ["newCategoryName"],
+      });
+    }
+
+    if (!brandId) {
+      context.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: "Selecione uma marca ou cadastre uma nova.",
+        path: ["brandId"],
+      });
+    }
+
+    if (brandId === CREATE_NEW_OPTION_VALUE && !newBrandName) {
+      context.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: "Informe o nome da nova marca.",
+        path: ["newBrandName"],
+      });
+    }
+
     if (
       typeof value.promotionalPrice === "number" &&
       value.promotionalPrice >= value.currentPrice
     ) {
       context.addIssue({
         code: z.ZodIssueCode.custom,
-        message: "O preco promocional deve ser menor que o preco atual.",
+        message: "O preço promocional deve ser menor que o preço atual.",
         path: ["promotionalPrice"],
       });
     }
@@ -62,7 +104,7 @@ export const productFormSchema = z
       if (seenSizes.has(sizeItem.size)) {
         context.addIssue({
           code: z.ZodIssueCode.custom,
-          message: "Nao repita a mesma numeracao.",
+          message: "Não repita a mesma numeração.",
           path: ["sizes", index, "size"],
         });
       }
@@ -78,6 +120,8 @@ export const defaultProductValues: ProductFormValues = {
   audience: ProductAudience.ADULTO,
   categoryId: "",
   brandId: "",
+  newCategoryName: "",
+  newBrandName: "",
   model: "",
   shortDescription: "",
   color: "",

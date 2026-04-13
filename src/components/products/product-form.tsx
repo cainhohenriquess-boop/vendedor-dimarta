@@ -12,7 +12,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import { DEFAULT_PRODUCT_IMAGE } from "@/lib/constants";
+import {
+  CREATE_NEW_OPTION_VALUE,
+  DEFAULT_PRODUCT_IMAGE,
+} from "@/lib/constants";
 import { getErrorMessage } from "@/lib/utils";
 import {
   productFormSchema,
@@ -87,6 +90,8 @@ export function ProductForm({
   });
 
   const imageUrl = watch("imageUrl");
+  const selectedCategoryId = watch("categoryId");
+  const selectedBrandId = watch("brandId");
 
   useEffect(() => {
     if (selectedFile) {
@@ -114,7 +119,7 @@ export function ProductForm({
             }
 
             if (!finalImageUrl) {
-              throw new Error("Adicione uma imagem ou informe uma URL valida.");
+              throw new Error("Adicione uma imagem ou informe uma URL válida.");
             }
 
             const response = await fetch(
@@ -139,7 +144,7 @@ export function ProductForm({
               const payload = (await response.json().catch(() => null)) as
                 | { error?: string }
                 | null;
-              throw new Error(payload?.error ?? "Nao foi possivel salvar o produto.");
+              throw new Error(payload?.error ?? "Não foi possível salvar o produto.");
             }
 
             const payload = (await response.json()) as { id: string };
@@ -162,19 +167,19 @@ export function ProductForm({
             Dados principais
           </h2>
           <p className="text-sm leading-6 text-slate-500">
-            Campos estruturados para facilitar busca, filtros e evolucao futura do
-            catalogo.
+            Campos estruturados para facilitar busca, filtros e evolução futura do
+            catálogo.
           </p>
         </div>
 
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           <div>
             <label className="mb-2 block text-sm font-semibold text-slate-700">
-              Publico
+              Público
             </label>
             <Select {...register("audience")}>
               <option value="ADULTO">Adulto</option>
-              <option value="CRIANCA">Crianca</option>
+              <option value="CRIANCA">Criança</option>
             </Select>
             <FieldError message={errors.audience?.message} />
           </div>
@@ -185,6 +190,7 @@ export function ProductForm({
             </label>
             <Select {...register("categoryId")}>
               <option value="">Selecione</option>
+              <option value={CREATE_NEW_OPTION_VALUE}>Cadastrar nova categoria</option>
               {categories.map((category) => (
                 <option key={category.id} value={category.id}>
                   {category.name}
@@ -192,6 +198,18 @@ export function ProductForm({
               ))}
             </Select>
             <FieldError message={errors.categoryId?.message} />
+            {selectedCategoryId === CREATE_NEW_OPTION_VALUE ? (
+              <div className="mt-3 space-y-2">
+                <p className="text-xs leading-5 text-slate-500">
+                  Digite o nome da categoria para criar e vincular ao produto.
+                </p>
+                <Input
+                  placeholder="Ex.: Papete"
+                  {...register("newCategoryName")}
+                />
+                <FieldError message={errors.newCategoryName?.message} />
+              </div>
+            ) : null}
           </div>
 
           <div>
@@ -200,6 +218,7 @@ export function ProductForm({
             </label>
             <Select {...register("brandId")}>
               <option value="">Selecione</option>
+              <option value={CREATE_NEW_OPTION_VALUE}>Cadastrar nova marca</option>
               {brands.map((brand) => (
                 <option key={brand.id} value={brand.id}>
                   {brand.name}
@@ -207,6 +226,18 @@ export function ProductForm({
               ))}
             </Select>
             <FieldError message={errors.brandId?.message} />
+            {selectedBrandId === CREATE_NEW_OPTION_VALUE ? (
+              <div className="mt-3 space-y-2">
+                <p className="text-xs leading-5 text-slate-500">
+                  Digite o nome da marca para criar e vincular ao produto.
+                </p>
+                <Input
+                  placeholder="Ex.: Beira Rio"
+                  {...register("newBrandName")}
+                />
+                <FieldError message={errors.newBrandName?.message} />
+              </div>
+            ) : null}
           </div>
 
           <div>
@@ -233,7 +264,7 @@ export function ProductForm({
 
           <div>
             <label className="mb-2 block text-sm font-semibold text-slate-700">
-              Codigo interno
+              Código interno
             </label>
             <Input
               placeholder="Ex.: MOL-RAS-001"
@@ -256,17 +287,17 @@ export function ProductForm({
         <div className="surface-card space-y-5 p-6">
           <div className="space-y-1">
             <h2 className="font-display text-2xl font-semibold text-slate-900">
-              Descricao e preco
+              Descrição e preço
             </h2>
             <p className="text-sm leading-6 text-slate-500">
-              Informacoes de atendimento rapido para o vendedor consultar no
+              Informações de atendimento rápido para o vendedor consultar no
               balcão.
             </p>
           </div>
 
           <div>
             <label className="mb-2 block text-sm font-semibold text-slate-700">
-              Descricao curta
+              Descrição curta
             </label>
             <Textarea
               placeholder="Resumo objetivo do produto, material ou diferencial."
@@ -278,7 +309,7 @@ export function ProductForm({
           <div className="grid gap-4 md:grid-cols-2">
             <div>
               <label className="mb-2 block text-sm font-semibold text-slate-700">
-                Preco atual
+                Preço atual
               </label>
               <Input
                 type="number"
@@ -294,7 +325,7 @@ export function ProductForm({
 
             <div>
               <label className="mb-2 block text-sm font-semibold text-slate-700">
-                Preco promocional
+                Preço promocional
               </label>
               <Input
                 type="number"
@@ -319,7 +350,7 @@ export function ProductForm({
               Imagem do produto
             </h2>
             <p className="text-sm leading-6 text-slate-500">
-              Envie uma foto para a Vercel Blob ou informe uma URL publica.
+              Envie uma foto para a Vercel Blob ou informe uma URL pública.
             </p>
           </div>
 
@@ -353,7 +384,7 @@ export function ProductForm({
               <p className="mt-2 text-xs leading-5 text-slate-400">
                 {uploadEnabled
                   ? "Upload pronto para uso com Vercel Blob."
-                  : "Sem token de upload configurado. Voce ainda pode informar uma URL manualmente para testar localmente."}
+                  : "Sem token de upload configurado. Você ainda pode informar uma URL manualmente para testar localmente."}
               </p>
             </div>
 
@@ -379,13 +410,14 @@ export function ProductForm({
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div className="space-y-1">
             <h2 className="font-display text-2xl font-semibold text-slate-900">
-              Numeracoes e estoque
+              Numerações e estoque
             </h2>
             <p className="text-sm leading-6 text-slate-500">
-              Cada produto pode ter varias numeracoes com estoque individual.
+              Cada produto pode ter várias numerações com estoque individual.
             </p>
           </div>
           <Button
+            type="button"
             variant="outline"
             onClick={() =>
               append({
@@ -396,7 +428,7 @@ export function ProductForm({
             }
           >
             <Plus className="size-4" />
-            Adicionar numeracao
+            Adicionar numeração
           </Button>
         </div>
 
@@ -408,7 +440,7 @@ export function ProductForm({
             >
               <div>
                 <label className="mb-2 block text-sm font-semibold text-slate-700">
-                  Numero
+                  Número
                 </label>
                 <Input
                   type="number"
@@ -441,6 +473,7 @@ export function ProductForm({
 
               <div className="flex items-end">
                 <Button
+                  type="button"
                   variant="ghost"
                   className="w-full text-rose-600 hover:bg-rose-50"
                   onClick={() => {
@@ -477,7 +510,7 @@ export function ProductForm({
           ) : mode === "create" ? (
             "Cadastrar produto"
           ) : (
-            "Salvar alteracoes"
+            "Salvar alterações"
           )}
         </Button>
       </div>

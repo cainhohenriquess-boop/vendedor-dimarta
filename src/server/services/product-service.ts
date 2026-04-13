@@ -1,6 +1,8 @@
 import { Prisma } from "@prisma/client";
+import { CREATE_NEW_OPTION_VALUE } from "@/lib/constants";
 import prisma from "@/lib/prisma";
 import { buildProductSearchDocument } from "@/lib/search";
+import { slugify } from "@/lib/utils";
 import {
   productFormSchema,
   type ProductFormInput,
@@ -23,24 +25,46 @@ function toDecimal(value: number) {
 
 async function getReferences(
   tx: Prisma.TransactionClient,
-  categoryId: string,
-  brandId: string,
+  values: ReturnType<typeof normalizeProductInput>,
 ) {
-  const [category, brand] = await Promise.all([
-    tx.category.findUnique({
-      where: {
-        id: categoryId,
-      },
-    }),
-    tx.brand.findUnique({
-      where: {
-        id: brandId,
-      },
-    }),
-  ]);
+  const category =
+    values.categoryId === CREATE_NEW_OPTION_VALUE
+      ? await tx.category.upsert({
+          where: {
+            slug: slugify(values.newCategoryName ?? ""),
+          },
+          update: {},
+          create: {
+            name: values.newCategoryName!.trim(),
+            slug: slugify(values.newCategoryName ?? ""),
+          },
+        })
+      : await tx.category.findUnique({
+          where: {
+            id: values.categoryId,
+          },
+        });
+
+  const brand =
+    values.brandId === CREATE_NEW_OPTION_VALUE
+      ? await tx.brand.upsert({
+          where: {
+            slug: slugify(values.newBrandName ?? ""),
+          },
+          update: {},
+          create: {
+            name: values.newBrandName!.trim(),
+            slug: slugify(values.newBrandName ?? ""),
+          },
+        })
+      : await tx.brand.findUnique({
+          where: {
+            id: values.brandId,
+          },
+        });
 
   if (!category || !brand) {
-    throw new Error("Categoria ou marca invalida.");
+    throw new Error("Categoria ou marca inválida.");
   }
 
   return {
@@ -58,8 +82,8 @@ function buildBaseProductData(
 
   return {
     audience: values.audience,
-    categoryId: values.categoryId,
-    brandId: values.brandId,
+    categoryId: references.category.id,
+    brandId: references.brand.id,
     model: values.model,
     shortDescription: values.shortDescription,
     color: values.color,
@@ -90,7 +114,7 @@ export async function createProduct(input: ProductFormInput, userId: string) {
   const values = normalizeProductInput(input);
 
   return prisma.$transaction(async (tx) => {
-    const references = await getReferences(tx, values.categoryId, values.brandId);
+    const references = await getReferences(tx, values);
     const baseData = buildBaseProductData(values, references, userId);
 
     return tx.product.create({
@@ -116,7 +140,7 @@ export async function updateProduct(
   const values = normalizeProductInput(input);
 
   return prisma.$transaction(async (tx) => {
-    const references = await getReferences(tx, values.categoryId, values.brandId);
+    const references = await getReferences(tx, values);
     const baseData = buildBaseProductData(values, references, userId);
 
     return tx.product.update({

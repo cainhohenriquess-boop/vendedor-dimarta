@@ -26,7 +26,7 @@ function getJwtSecretKey() {
     return new TextEncoder().encode("dimarta-dev-secret");
   }
 
-  throw new Error("AUTH_SECRET nao configurado.");
+  throw new Error("AUTH_SECRET não configurado.");
 }
 
 export async function signSessionToken(user: SessionUser) {

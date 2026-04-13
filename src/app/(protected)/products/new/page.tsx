@@ -14,7 +14,7 @@ export default async function NewProductPage() {
       <PageHeader
         eyebrow="Cadastro"
         title="Novo produto"
-        description="Cadastre o produto com todos os campos estruturados para facilitar a consulta rapida no balcao."
+        description="Cadastre o produto com todos os campos estruturados para facilitar a consulta rápida no balcão."
       />
 
       <ProductForm

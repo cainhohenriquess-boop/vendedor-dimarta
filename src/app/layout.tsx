@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: `%s | ${APP_NAME}`,
   },
   description:
-    "Sistema interno para vendedores de loja de calcados consultarem preco, estoque e detalhes dos produtos com rapidez.",
+    "Sistema interno para vendedores de loja de calçados consultarem preço, estoque e detalhes dos produtos com rapidez.",
   applicationName: APP_NAME,
 };
 

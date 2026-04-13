@@ -4,10 +4,11 @@ export const APP_NAME = "Dimarta Vendas";
 export const DEFAULT_PRODUCT_IMAGE = "/demo-images/default-shoe.svg";
 export const LOW_STOCK_THRESHOLD = 3;
 export const MAX_UPLOAD_SIZE_MB = 4;
+export const CREATE_NEW_OPTION_VALUE = "__new__";
 
 export const AUDIENCE_LABELS: Record<ProductAudience, string> = {
   ADULTO: "Adulto",
-  CRIANCA: "Crianca",
+  CRIANCA: "Criança",
 };
 
 export const STATUS_LABELS: Record<ProductStatus, string> = {

@@ -38,7 +38,7 @@ export default async function ProductDetailsPage({
       <PageHeader
         eyebrow="Detalhes"
         title={product.model}
-        description="Leitura rapida das informacoes essenciais para atendimento: preco, estoque, numeracoes, codigo interno e status."
+        description="Leitura rápida das informações essenciais para atendimento: preço, estoque, numerações, código interno e status."
         actions={
           <>
             <Link href="/products" className={buttonVariants({ variant: "outline" })}>
@@ -80,10 +80,10 @@ export default async function ProductDetailsPage({
             <Badge variant="outline">{product.brand.name}</Badge>
             <Badge variant="outline">{product.category.name}</Badge>
             <Badge variant="outline">
-              {product.audience === "ADULTO" ? "Adulto" : "Crianca"}
+              {product.audience === "ADULTO" ? "Adulto" : "Criança"}
             </Badge>
             <ProductStatusBadge status={product.status} />
-            {product.promotionalPrice ? <Badge variant="warning">Promocao</Badge> : null}
+            {product.promotionalPrice ? <Badge variant="warning">Promoção</Badge> : null}
           </div>
 
           <div>
@@ -99,7 +99,7 @@ export default async function ProductDetailsPage({
         <section className="space-y-6">
           <div className="surface-card p-6">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-              Preco em destaque
+              Preço em destaque
             </p>
             {product.promotionalPrice ? (
               <>
@@ -120,7 +120,7 @@ export default async function ProductDetailsPage({
           <div className="grid gap-4 md:grid-cols-2">
             <div className="surface-card p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
-                Codigo interno
+                Código interno
               </p>
               <p className="mt-2 text-base font-semibold text-slate-900">
                 {product.internalCode}
@@ -153,10 +153,10 @@ export default async function ProductDetailsPage({
           <div className="surface-card p-6">
             <div className="space-y-2">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
-                Variacoes
+                Variações
               </p>
               <h3 className="font-display text-2xl font-semibold text-slate-900">
-                Numeracoes e estoque por tamanho
+                Numerações e estoque por tamanho
               </h3>
             </div>
             <div className="mt-4">
@@ -176,7 +176,7 @@ export default async function ProductDetailsPage({
               </div>
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
-                  Ultima alteracao
+                  Última alteração
                 </p>
                 <p className="mt-2 text-sm font-semibold text-slate-900">
                   {product.updatedByName ?? "Sistema"}

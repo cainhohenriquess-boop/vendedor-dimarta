@@ -361,6 +361,8 @@ export async function getProductForEdit(id: string): Promise<ProductFormDefaults
     audience: product.audience,
     categoryId: product.categoryId,
     brandId: product.brandId,
+    newCategoryName: "",
+    newBrandName: "",
     model: product.model,
     shortDescription: product.shortDescription,
     color: product.color,

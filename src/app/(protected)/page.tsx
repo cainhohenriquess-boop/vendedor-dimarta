@@ -16,8 +16,8 @@ export default async function DashboardPage() {
     <div className="space-y-6">
       <PageHeader
         eyebrow="Dashboard"
-        title="Visao geral da operacao"
-        description="Resumo rapido para o vendedor conferir estoque, promocoes e os produtos consultados mais recentemente."
+        title="Visão geral da operação"
+        description="Resumo rápido para o vendedor conferir estoque, promoções e os produtos consultados mais recentemente."
         actions={
           <Link href="/products" className={buttonVariants({ variant: "primary" })}>
             Ir para produtos
@@ -33,16 +33,16 @@ export default async function DashboardPage() {
           icon={<Boxes className="size-5" />}
         />
         <StatCard
-          title="Itens em promocao"
+          title="Itens em promoção"
           value={formatNumber(metrics.promotionalProducts)}
-          description="Produtos com preco promocional visivel no atendimento."
+          description="Produtos com preço promocional visível no atendimento."
           icon={<CirclePercent className="size-5" />}
           tone="accent"
         />
         <StatCard
           title="Estoque total"
           value={formatNumber(metrics.totalUnits)}
-          description="Soma de todas as unidades distribuidas por numeracao."
+          description="Soma de todas as unidades distribuídas por numeração."
           icon={<PackageSearch className="size-5" />}
           tone="success"
         />
@@ -59,7 +59,7 @@ export default async function DashboardPage() {
         <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-              Ultimas atualizacoes
+              Últimas atualizações
             </p>
             <h2 className="mt-2 font-display text-2xl font-semibold text-slate-900">
               Produtos recentes
@@ -70,7 +70,7 @@ export default async function DashboardPage() {
             </p>
           </div>
           <Link href="/products" className={buttonVariants({ variant: "outline" })}>
-            Ver catalogo completo
+            Ver catálogo completo
           </Link>
         </div>
 
@@ -85,7 +85,7 @@ export default async function DashboardPage() {
                 <Badge variant="outline">{product.brand.name}</Badge>
                 <Badge variant="outline">{product.category.name}</Badge>
                 {product.promotionalPrice ? (
-                  <Badge variant="warning">Promocao</Badge>
+                  <Badge variant="warning">Promoção</Badge>
                 ) : null}
               </div>
 
@@ -101,7 +101,7 @@ export default async function DashboardPage() {
               <div className="grid gap-3 sm:grid-cols-3">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
-                    Preco
+                    Preço
                   </p>
                   <p className="mt-2 font-semibold text-slate-900">
                     {formatCurrencyBRL(

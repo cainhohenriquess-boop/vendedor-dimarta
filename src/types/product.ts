@@ -41,6 +41,8 @@ export type ProductFormDefaults = {
   audience: ProductAudience;
   categoryId: string;
   brandId: string;
+  newCategoryName?: string;
+  newBrandName?: string;
   model: string;
   shortDescription: string;
   color: string;

@@ -49,14 +49,14 @@ export function DeleteProductButton({
           <div className="surface-card w-full max-w-md p-6">
             <div className="space-y-2">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-rose-500">
-                Confirmar exclusao
+                Confirmar exclusão
               </p>
               <h3 className="font-display text-2xl font-semibold text-slate-900">
                 Remover produto
               </h3>
               <p className="text-sm leading-6 text-slate-500">
-                O produto <strong>{productName}</strong> sera excluido com todas as
-                variacoes de numeracao e estoque.
+                O produto <strong>{productName}</strong> será excluído com todas as
+                variações de numeração e estoque.
               </p>
             </div>
 
@@ -84,7 +84,7 @@ export function DeleteProductButton({
                         throw new Error(payload?.error ?? "Falha ao excluir o produto.");
                       }
 
-                      toast.success("Produto excluido com sucesso.");
+                      toast.success("Produto excluído com sucesso.");
                       setOpen(false);
 
                       if (redirectTo) {

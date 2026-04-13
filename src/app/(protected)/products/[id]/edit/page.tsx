@@ -31,9 +31,9 @@ export default async function EditProductPage({
   return (
     <div className="space-y-6">
       <PageHeader
-        eyebrow="Edicao"
+        eyebrow="Edição"
         title={`Editar ${product.model}`}
-        description="Atualize preco, estoque, status, foto e demais campos estruturados do produto."
+        description="Atualize preço, estoque, status, foto e demais campos estruturados do produto."
       />
 
       <ProductForm

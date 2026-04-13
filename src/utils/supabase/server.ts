@@ -7,7 +7,7 @@ const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
 function getSupabaseConfig() {
   if (!supabaseUrl || !supabaseKey) {
     throw new Error(
-      "Variaveis NEXT_PUBLIC_SUPABASE_URL e NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY nao configuradas.",
+      "Variáveis NEXT_PUBLIC_SUPABASE_URL e NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY não configuradas.",
     );
   }
 
@@ -35,7 +35,7 @@ export const createClient = async (
           });
         } catch {
           // Server Components nem sempre conseguem persistir cookies.
-          // Nesses casos o middleware cuida da atualizacao da sessao.
+          // Nesses casos o middleware cuida da atualização da sessão.
         }
       },
     },

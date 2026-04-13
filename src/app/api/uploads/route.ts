@@ -5,7 +5,7 @@ import { MAX_UPLOAD_SIZE_BYTES, isBlobUploadConfigured } from "@/lib/uploads";
 function unauthorizedResponse() {
   return Response.json(
     {
-      error: "Sessao expirada. Faca login novamente.",
+      error: "Sessão expirada. Faça login novamente.",
     },
     {
       status: 401,
@@ -30,7 +30,7 @@ export async function POST(request: Request) {
   if (!isBlobUploadConfigured()) {
     return Response.json(
       {
-        error: "BLOB_READ_WRITE_TOKEN nao configurado.",
+        error: "BLOB_READ_WRITE_TOKEN não configurado.",
       },
       {
         status: 500,

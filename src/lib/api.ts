@@ -4,9 +4,9 @@ import { ZodError } from "zod";
 export function getApiErrorResponse(error: unknown) {
   if (error instanceof ZodError) {
     return Response.json(
-      {
-        error: error.issues[0]?.message ?? "Dados invalidos.",
-      },
+        {
+          error: error.issues[0]?.message ?? "Dados inválidos.",
+        },
       {
         status: 400,
       },
@@ -17,7 +17,7 @@ export function getApiErrorResponse(error: unknown) {
     if (error.code === "P2002") {
       return Response.json(
         {
-          error: "Ja existe um registro com este valor unico.",
+          error: "Já existe um registro com este valor único.",
         },
         {
           status: 409,
@@ -28,7 +28,7 @@ export function getApiErrorResponse(error: unknown) {
     if (error.code === "P2025") {
       return Response.json(
         {
-          error: "Registro nao encontrado.",
+          error: "Registro não encontrado.",
         },
         {
           status: 404,

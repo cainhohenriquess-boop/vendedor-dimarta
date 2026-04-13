@@ -9,7 +9,7 @@ import {
 function unauthorizedResponse() {
   return Response.json(
     {
-      error: "Sessao expirada. Faca login novamente.",
+      error: "Sessão expirada. Faça login novamente.",
     },
     {
       status: 401,
@@ -31,7 +31,7 @@ export async function GET(_request: Request, context: ProductRouteContext) {
     if (!product) {
       return Response.json(
         {
-          error: "Produto nao encontrado.",
+          error: "Produto não encontrado.",
         },
         {
           status: 404,
