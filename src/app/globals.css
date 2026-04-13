@@ -1,20 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f4ee;
-  --foreground: #172033;
-  --card: rgba(255, 255, 255, 0.82);
-  --card-strong: #ffffff;
-  --muted: #64748b;
-  --border: rgba(148, 163, 184, 0.22);
-  --ring: rgba(13, 148, 136, 0.28);
-  --primary: #0f766e;
-  --primary-foreground: #f8fafc;
-  --secondary: #fff7ed;
-  --secondary-foreground: #9a3412;
-  --accent: #f59e0b;
+  --background: #f6efe7;
+  --foreground: #2d241d;
+  --card: rgba(255, 251, 246, 0.84);
+  --card-strong: #fffdfa;
+  --muted: #786657;
+  --border: rgba(153, 122, 93, 0.18);
+  --ring: rgba(153, 122, 93, 0.24);
+  --primary: #997a5d;
+  --primary-foreground: #fffaf5;
+  --secondary: #ebe1d5;
+  --secondary-foreground: #6f543d;
+  --accent: #c79063;
   --danger: #dc2626;
-  --success: #15803d;
+  --success: #6d8b63;
 }
 
 @theme inline {
@@ -49,14 +49,14 @@ body {
 
 body {
   background:
-    radial-gradient(circle at top left, rgba(245, 158, 11, 0.14), transparent 34%),
-    radial-gradient(circle at bottom right, rgba(15, 118, 110, 0.12), transparent 38%),
-    linear-gradient(180deg, #fbfaf7 0%, #f4efe6 100%);
+    radial-gradient(circle at top left, rgba(199, 144, 99, 0.16), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(153, 122, 93, 0.14), transparent 38%),
+    linear-gradient(180deg, #fbf7f2 0%, #f1e8dd 100%);
   color: var(--foreground);
 }
 
 ::selection {
-  background: rgba(15, 118, 110, 0.18);
+  background: rgba(153, 122, 93, 0.2);
 }
 
 @layer base {
@@ -71,11 +71,11 @@ body {
 
 @layer utilities {
   .surface-card {
-    @apply rounded-3xl border border-white/60 bg-white/80 shadow-[0_24px_60px_-36px_rgba(15,23,42,0.42)] backdrop-blur;
+    @apply rounded-3xl border border-white/60 bg-white/80 shadow-[0_24px_60px_-36px_rgba(89,61,39,0.28)] backdrop-blur;
   }
 
   .surface-subtle {
-    @apply rounded-2xl border border-slate-200/70 bg-white/70 backdrop-blur;
+    @apply rounded-2xl border border-[#d8c7b8]/70 bg-white/72 backdrop-blur;
   }
 
   .text-balance {

@@ -1,5 +1,5 @@
-import { APP_NAME } from "@/lib/constants";
 import { getInitials } from "@/lib/utils";
+import { BrandLogo } from "@/components/layout/brand-logo";
 import { LogoutButton } from "@/components/layout/logout-button";
 import { MobileNav } from "@/components/layout/mobile-nav";
 import { SidebarNav } from "@/components/layout/sidebar-nav";
@@ -18,17 +18,12 @@ export function AppShell({ user, children }: AppShellProps) {
       <div className="mx-auto flex max-w-7xl gap-6 px-4 py-4 md:px-6 md:py-6">
         <aside className="hidden md:flex md:w-[280px] md:flex-col md:gap-6">
           <div className="surface-card space-y-5 p-6">
-            <div className="space-y-2">
-              <span className="inline-flex rounded-full bg-secondary px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-secondary-foreground">
-                Loja de calçados
-              </span>
-              <div>
-                <h1 className="font-display text-3xl font-semibold">{APP_NAME}</h1>
-                <p className="mt-2 text-sm leading-6 text-slate-500">
-                  Consulta rápida de preço, estoque e cadastro para vendedores em
-                  atendimento.
-                </p>
-              </div>
+            <div className="space-y-4">
+              <BrandLogo imageClassName="bg-[#997a5d]" />
+              <p className="max-w-[22ch] text-sm leading-6 text-slate-500">
+                Consulta rápida de preço, estoque e cadastro para vendedores no
+                atendimento da loja.
+              </p>
             </div>
 
             <SidebarNav />

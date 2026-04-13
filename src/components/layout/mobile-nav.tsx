@@ -25,13 +25,13 @@ export function MobileNav() {
             <Link
               key={item.href}
               href={item.href}
-              className={cn(
-                "flex flex-col items-center justify-center gap-1 rounded-2xl px-2 py-3 text-xs font-semibold transition",
-                isActive
-                  ? "bg-slate-900 text-white"
-                  : "text-slate-500 hover:bg-slate-100",
-              )}
-            >
+            className={cn(
+              "flex flex-col items-center justify-center gap-1 rounded-2xl px-2 py-3 text-xs font-semibold transition",
+              isActive
+                  ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20"
+                  : "text-slate-500 hover:bg-primary/10 hover:text-primary",
+            )}
+          >
               <Icon className="size-4" />
               {item.label}
             </Link>

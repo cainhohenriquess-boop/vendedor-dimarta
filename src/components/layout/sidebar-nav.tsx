@@ -27,8 +27,8 @@ export function SidebarNav() {
             className={cn(
               "flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-medium transition",
               isActive
-                ? "bg-slate-900 text-white shadow-lg shadow-slate-900/15"
-                : "text-slate-600 hover:bg-white hover:text-slate-900",
+                ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20"
+                : "text-slate-600 hover:bg-primary/10 hover:text-primary",
             )}
           >
             <Icon className="size-4" />

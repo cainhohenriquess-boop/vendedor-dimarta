@@ -2,6 +2,7 @@ import { redirect } from "next/navigation";
 import { LoginForm } from "@/components/auth/login-form";
 import { APP_NAME } from "@/lib/constants";
 import { getCurrentUser } from "@/lib/auth";
+import { BrandLogo } from "@/components/layout/brand-logo";
 
 export const dynamic = "force-dynamic";
 
@@ -32,6 +33,10 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
       <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[1.1fr_0.9fr]">
         <section className="surface-card flex min-h-[620px] flex-col justify-between p-8 sm:p-10">
           <div className="space-y-6">
+            <div className="max-w-[180px]">
+              <BrandLogo priority imageClassName="bg-[#997a5d]" />
+            </div>
+
             <span className="inline-flex rounded-full bg-secondary px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-secondary-foreground">
               Uso interno da loja
             </span>
