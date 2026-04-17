@@ -5,6 +5,7 @@ import {
   ProductStatus,
   UserRole,
 } from "@prisma/client";
+import { DEFAULT_SELLER_CREDENTIALS } from "../src/lib/auth/default-seller";
 
 const prisma = new PrismaClient();
 
@@ -53,19 +54,19 @@ function buildSearchDocument(input: {
 }
 
 async function main() {
-  const sellerPassword = await bcrypt.hash("12345678", 10);
+  const sellerPassword = await bcrypt.hash(DEFAULT_SELLER_CREDENTIALS.password, 10);
 
   const seller = await prisma.user.upsert({
-    where: { email: "vendedor@dimarta.com" },
+    where: { email: DEFAULT_SELLER_CREDENTIALS.email },
     update: {
-      name: "Vendedor Dimarta",
+      name: DEFAULT_SELLER_CREDENTIALS.name,
       passwordHash: sellerPassword,
       role: UserRole.SELLER,
       isActive: true,
     },
     create: {
-      name: "Vendedor Dimarta",
-      email: "vendedor@dimarta.com",
+      name: DEFAULT_SELLER_CREDENTIALS.name,
+      email: DEFAULT_SELLER_CREDENTIALS.email,
       passwordHash: sellerPassword,
       role: UserRole.SELLER,
     },
@@ -270,7 +271,7 @@ async function main() {
     });
   }
 
-  console.log("Seed concluido com usuario vendedor e produtos de exemplo.");
+  console.log("Seed concluido com a conta padrao da loja e produtos de exemplo.");
 }
 
 main()

@@ -91,12 +91,6 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
               </p>
             </div>
 
-            <div className="rounded-3xl border border-dashed border-slate-200 bg-slate-50/90 p-5 text-sm text-slate-600">
-              <p className="font-semibold text-slate-800">Credenciais de teste</p>
-              <p className="mt-2">E-mail: vendedor@dimarta.com</p>
-              <p>Senha: 12345678</p>
-            </div>
-
             <LoginForm nextPath={nextPath} />
           </div>
         </section>

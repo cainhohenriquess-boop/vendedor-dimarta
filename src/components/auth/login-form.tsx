@@ -33,8 +33,8 @@ export function LoginForm({ nextPath }: LoginFormProps) {
   } = useForm<LoginInput>({
     resolver: zodResolver(loginSchema),
     defaultValues: {
-      email: "vendedor@dimarta.com",
-      password: "12345678",
+      email: "",
+      password: "",
     },
   });
 

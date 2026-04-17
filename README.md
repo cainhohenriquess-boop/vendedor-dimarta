@@ -161,8 +161,8 @@ npm run dev
 
 Abra `http://localhost:3000` e use:
 
-- E-mail: `vendedor@dimarta.com`
-- Senha: `12345678`
+- E-mail: `anacristina@dimarta.com`
+- Senha: `Dimarta2026`
 
 ### 5. Configurar a Vercel
 
@@ -208,8 +208,8 @@ Depois:
 
 ### Usuario de teste
 
-- E-mail: `vendedor@dimarta.com`
-- Senha: `12345678`
+- E-mail: `anacristina@dimarta.com`
+- Senha: `Dimarta2026`
 
 ## Scripts uteis
 
