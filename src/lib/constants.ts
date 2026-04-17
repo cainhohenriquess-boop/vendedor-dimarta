@@ -29,5 +29,6 @@ export const PRODUCT_STATUS_OPTIONS = [
 export const NAV_ITEMS = [
   { href: "/", label: "Dashboard" },
   { href: "/products", label: "Produtos" },
+  { href: "/promissorias", label: "Promissórias" },
   { href: "/products/new", label: "Cadastrar" },
 ];

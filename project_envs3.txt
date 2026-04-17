@@ -1,0 +1,165 @@
+{
+  "envs": [
+    {
+      "value": "eyJ2IjoidjIiLCJjIjoiZjRUUVV6NjR0U0t4T2IxS0E2djRPeU1hRmpHSEpoUFA1U3Y3aHBvM2NTYjJrWWJXVGtCdjd4MGFobDNBNlUzTXJmL0ltS2toNkJvcWt3UFV1YlBhMUpMMndZTTJLeDFSbDY5YmFRQVVrbFdCNmgrM24rRmd2TStnRERwRkw4b2hTdlZZWHJPcnB2Y0dyaFdtZkJnRHIvenFIRnFPdW0rb25DaklNcHIwUHVSZWUxM1VHcXIvUnBHU2hBeEYxS2pQd240NDFENy8ybHoxQjRhUU1jODd0R2VSZ2JkcFF3NXJpUHVLQU9HMW0yMD0iLCJrIjpbMTg0LDEsMiwzLDAsMTIwLDEwNywxMTksMTUzLDIzLDIyMywxMTcsMTgzLDEyMCw1NywxOTYsMTEsMjgsMjQ5LDExOSwxMDQsMjEzLDE2OSwxNjEsMTQxLDE0Miw5OSw2NSw0OSwyMTIsMzAsMTk5LDk3LDIwNCwyMTgsNzcsMTA1LDE3OSwxLDgxLDE2NiwxODcsMTc4LDEzNiwzMCwxMyw4NSwyNiw1MSwyNDEsMjE2LDExMCwxMzIsMTQ0LDg3LDAsMCwwLDEyNiw0OCwxMjQsNiw5LDQyLDEzNCw3MiwxMzQsMjQ3LDEzLDEsNyw2LDE2MCwxMTEsNDgsMTA5LDIsMSwwLDQ4LDEwNCw2LDksNDIsMTM0LDcyLDEzNCwyNDcsMTMsMSw3LDEsNDgsMzAsNiw5LDk2LDEzNCw3MiwxLDEwMSwzLDQsMSw0Niw0OCwxNyw0LDEyLDg4LDI1MCwyNDQsMzMsNjAsMjAyLDI0MSwxMjQsMTEzLDE2OSw5MiwxMTIsMiwxLDE2LDEyOCw1OSw3OCwyMDQsMTM4LDgxLDY4LDEzNiwxNzksNDAsMTU0LDExNiw4OSwxNzEsMjQ2LDIzNiwxNzAsMTYsMjM4LDU5LDYwLDIyMiwyNTMsOSwxOTIsMzIsMTQ2LDM3LDM2LDYsMTA2LDE1OSwxMjUsMjMwLDE0MSwyNTAsMTI2LDI2LDIxMywxODYsMTE5LDE1MywzMywxMzMsNjcsNTcsMTk2LDE4NCwyNDAsMTM3LDIyMCw3NiwxMzgsMTk3LDUxLDE0NCwxMDcsNzMsMzksMTcsNTFdfQ==",
+      "type": "encrypted",
+      "contentHint": {
+        "type": "blob-read-write-token",
+        "storeId": "store_aRW6HmNb2lf0CkKb"
+      },
+      "target": [
+        "production",
+        "preview",
+        "development"
+      ],
+      "id": "fE341N5DL820GgLU",
+      "key": "BLOBB_READ_WRITE_TOKEN",
+      "configurationId": null,
+      "createdAt": 1776120326259,
+      "updatedAt": 1776120326259,
+      "createdBy": "rys6wpVpCiZtcEDmnU4KcZ1L",
+      "updatedBy": null,
+      "decrypted": false,
+      "lastEditedByDisplayName": "cainhohenriquess-2683"
+    },
+    {
+      "value": "eyJ2IjoidjIiLCJjIjoibkhCK0hiWVp3dm5ONVlpYytlUll0clI3bVR6VDZ0N1YxZm5oMkExdlhJcU11QVlFSzdZdnJTQ3dLdTdpNTNmQnhsbS92ZmEzR2U2N0xKa0E2M1BiMFdsK0NYN2tlc2J0cTZUNE9Wc3FZN2ZRbytTeGErSmtocjR0MUxIRCt0V3hDRVM0RnhsYmtEdW1NbjI1clJldEtDT3l0N2xEemN1WW1uVXZxYUFUS3phQzR5eDlKWFBkU2swdXNOQmZxaVdFb25tbjkyN0VOYjNrQ0ZwS3NQVFQ1U3RKUDFDQ1ZJN0hURkhKaXpPSVdDND0iLCJrIjpbMTg0LDEsMiwzLDAsMTIwLDEwNywxMTksMTUzLDIzLDIyMywxMTcsMTgzLDEyMCw1NywxOTYsMTEsMjgsMjQ5LDExOSwxMDQsMjEzLDE2OSwxNjEsMTQxLDE0Miw5OSw2NSw0OSwyMTIsMzAsMTk5LDk3LDIwNCwyMTgsNzcsMTA1LDE3OSwxLDEzOCwxNjIsMTksMTE0LDcyLDMzLDE2LDIwMSw2LDEyMiwxMDMsMjM3LDE0OCwyNDIsMjE2LDEyOCwwLDAsMCwxMjYsNDgsMTI0LDYsOSw0MiwxMzQsNzIsMTM0LDI0NywxMywxLDcsNiwxNjAsMTExLDQ4LDEwOSwyLDEsMCw0OCwxMDQsNiw5LDQyLDEzNCw3MiwxMzQsMjQ3LDEzLDEsNywxLDQ4LDMwLDYsOSw5NiwxMzQsNzIsMSwxMDEsMyw0LDEsNDYsNDgsMTcsNCwxMiwyMzIsMjM5LDIxOCwzOCw3NSw4OCw0OSw4OSw0OSwxODUsMTcyLDI1MCwyLDEsMTYsMTI4LDU5LDczLDEwLDI1Miw3NSwxMTgsMTkwLDE0MywyNDIsNDAsOTAsMTE5LDE0OSwyMjUsMTM5LDI1MCw4MCwxMjksMTkzLDExNSwxNjEsNzMsMTUxLDE1MiwxMTcsMjUwLDExLDIxMCwyNDIsMjcsOSwxNTEsMTU2LDE5LDQsMTM1LDE0OSwyMjIsMTQxLDIzMiwxNiwxMzIsMjYsMTU2LDY0LDIwMCw1MSwxOSwxMjQsMTk2LDgsMzcsMjI4LDI0MCwxNDIsMTQ0LDExMSwxNzksMjQwLDE0Ml19",
+      "type": "encrypted",
+      "contentHint": null,
+      "target": [
+        "production",
+        "preview",
+        "development"
+      ],
+      "id": "Quoi0ZGIHEWmM7zr",
+      "key": "BLOB_READ_WRITE_TOKEN",
+      "configurationId": null,
+      "createdAt": 1776117730412,
+      "updatedAt": 1776117730412,
+      "createdBy": "rys6wpVpCiZtcEDmnU4KcZ1L",
+      "updatedBy": null,
+      "decrypted": false,
+      "lastEditedByDisplayName": "cainhohenriquess-2683"
+    },
+    {
+      "type": "encrypted",
+      "value": "eyJ2IjoidjIiLCJjIjoiRkt3a0x1LytmalZtREVzWk9acEpQOHdqdUduVmZSbnE4dTN5aFNtK2hiL0RpbnpUc1pEVytFRFJmVHhvWWk4d1FDa042bG15SVpNRnlTVkFiZkhyeHI1NFE2bmVSdmN3SHNSM3JONnlmOWdyTlAwZUZ3c25sMy9DRWRqZXMyYzkzdWdtYVRQNEJyVXBlRVQ5Y3lVY0NoK3piTyt0Qm9jRG03SzZ3MkoyMWN1UjVPTE4rTXhHdDRLSjlpOEllTHNLNGZtRWphZDNyTUZURTJ5SUs4bSthVk8wd3J5cHAwd0VYYVhOSTJVd3o5ekJZOGxrTElDSkVPVmsrWFBhdWRVNUtVeEdSVGEyMDdET3RTMmQ0cnBSSDFKV0JOeW5jQ3gyMDIvOVl3UWtXUU9mUFRYNCIsImsiOlsxODQsMSwyLDMsMCwxMjAsMTA3LDExOSwxNTMsMjMsMjIzLDExNywxODMsMTIwLDU3LDE5NiwxMSwyOCwyNDksMTE5LDEwNCwyMTMsMTY5LDE2MSwxNDEsMTQyLDk5LDY1LDQ5LDIxMiwzMCwxOTksOTcsMjA0LDIxOCw3NywxMDUsMTc5LDEsMTM4LDE2MiwxOSwxMTQsNzIsMzMsMTYsMjAxLDYsMTIyLDEwMywyMzcsMTQ4LDI0MiwyMTYsMTI4LDAsMCwwLDEyNiw0OCwxMjQsNiw5LDQyLDEzNCw3MiwxMzQsMjQ3LDEzLDEsNyw2LDE2MCwxMTEsNDgsMTA5LDIsMSwwLDQ4LDEwNCw2LDksNDIsMTM0LDcyLDEzNCwyNDcsMTMsMSw3LDEsNDgsMzAsNiw5LDk2LDEzNCw3MiwxLDEwMSwzLDQsMSw0Niw0OCwxNyw0LDEyLDIzMiwyMzksMjE4LDM4LDc1LDg4LDQ5LDg5LDQ5LDE4NSwxNzIsMjUwLDIsMSwxNiwxMjgsNTksNzMsMTAsMjUyLDc1LDExOCwxOTAsMTQzLDI0Miw0MCw5MCwxMTksMTQ5LDIyNSwxMzksMjUwLDgwLDEyOSwxOTMsMTE1LDE2MSw3MywxNTEsMTUyLDExNywyNTAsMTEsMjEwLDI0MiwyNyw5LDE1MSwxNTYsMTksNCwxMzUsMTQ5LDIyMiwxNDEsMjMyLDE2LDEzMiwyNiwxNTYsNjQsMjAwLDUxLDE5LDEyNCwxOTYsOCwzNywyMjgsMjQwLDE0MiwxNDQsMTExLDE3OSwyNDAsMTQyXX0=",
+      "target": [
+        "production",
+        "preview",
+        "development"
+      ],
+      "configurationId": null,
+      "comment": "",
+      "customEnvironmentIds": [],
+      "id": "hP4iZQcJbJY4BHgv",
+      "key": "DIRECT_URL",
+      "createdAt": 1776055431304,
+      "updatedAt": 1776056098239,
+      "createdBy": "rys6wpVpCiZtcEDmnU4KcZ1L",
+      "updatedBy": "rys6wpVpCiZtcEDmnU4KcZ1L",
+      "decrypted": false,
+      "lastEditedByDisplayName": "cainhohenriquess-2683"
+    },
+    {
+      "type": "encrypted",
+      "value": "eyJ2IjoidjIiLCJjIjoiM1BzL2dZNWNpZk1VK1NDR2JNUUExMy9lMEZ4MENsYmd5a3QxUGdqWUNwWlhxcHhOZnhWcmZNakVYbG9DVUE5eHRnRFJmei9lVW53Ym9HQTNoc2krY3FPYm55SDhuOEdsVFhtOVJQVksvVXJPUlNRMWJrcVRwWkJOV0NxbGUzcFdVN2V2dkZMS3FhS1hHcFZNV1JXL0IxdUptUUJrT2JNSXkzcGJaM3VsWmYxUWJxbW0xQlZhZTlzNVhOdnk1dnhUVjVmcFlnZm5tWXhLcUYxN1JzRHltRi9EaWdOVkRGaXdIOFZ6R3llVE1jQUxza3pGZEdySnJmVWNSU2dLNFNLS29wWDNRZUNtcHNLZmJLRExjRXdpeVkva052TlZsQmVXUUg2V2pHUEdZYysvNDBFWjk3Ry9FS04zVHpiMlZmTTlPbnBCV2ZGaWlZSThLYy9XOEFQQ0c5TnozUFkzK21CbjhEcnRaTXBNK2d2VG1aazNnemFraVdELzVIVUU2Mk8vS3h5RFlQM1hHdGt0UXg1ZFZGbGREcjRvbWdJN2NuR0h0ajRTY296R05zb2ExanBGIiwiayI6WzE4NCwxLDIsMywwLDEyMCwxMDcsMTE5LDE1MywyMywyMjMsMTE3LDE4MywxMjAsNTcsMTk2LDExLDI4LDI0OSwxMTksMTA0LDIxMywxNjksMTYxLDE0MSwxNDIsOTksNjUsNDksMjEyLDMwLDE5OSw5NywyMDQsMjE4LDc3LDEwNSwxNzksMSw4MSwxNjYsMTg3LDE3OCwxMzYsMzAsMTMsODUsMjYsNTEsMjQxLDIxNiwxMTAsMTMyLDE0NCw4NywwLDAsMCwxMjYsNDgsMTI0LDYsOSw0MiwxMzQsNzIsMTM0LDI0NywxMywxLDcsNiwxNjAsMTExLDQ4LDEwOSwyLDEsMCw0OCwxMDQsNiw5LDQyLDEzNCw3MiwxMzQsMjQ3LDEzLDEsNywxLDQ4LDMwLDYsOSw5NiwxMzQsNzIsMSwxMDEsMyw0LDEsNDYsNDgsMTcsNCwxMiw4OCwyNTAsMjQ0LDMzLDYwLDIwMiwyNDEsMTI0LDExMywxNjksOTIsMTEyLDIsMSwxNiwxMjgsNTksNzgsMjA0LDEzOCw4MSw2OCwxMzYsMTc5LDQwLDE1NCwxMTYsODksMTcxLDI0NiwyMzYsMTcwLDE2LDIzOCw1OSw2MCwyMjIsMjUzLDksMTkyLDMyLDE0NiwzNywzNiw2LDEwNiwxNTksMTI1LDIzMCwxNDEsMjUwLDEyNiwyNiwyMTMsMTg2LDExOSwxNTMsMzMsMTMzLDY3LDU3LDE5NiwxODQsMjQwLDEzNywyMjAsNzYsMTM4LDE5Nyw1MSwxNDQsMTA3LDczLDM5LDE3LDUxXX0=",
+      "target": [
+        "production",
+        "preview",
+        "development"
+      ],
+      "configurationId": null,
+      "comment": "",
+      "customEnvironmentIds": [],
+      "id": "Bhoyy163bQAvaRdE",
+      "key": "DATABASE_URL",
+      "createdAt": 1776055376631,
+      "updatedAt": 1776056032116,
+      "createdBy": "rys6wpVpCiZtcEDmnU4KcZ1L",
+      "updatedBy": "rys6wpVpCiZtcEDmnU4KcZ1L",
+      "decrypted": false,
+      "lastEditedByDisplayName": "cainhohenriquess-2683"
+    },
+    {
+      "type": "encrypted",
+      "value": "eyJ2IjoidjIiLCJjIjoiMlFXdk1NZGpadm5tdFg5eHNKbk1CUEZyUXlsUW9DamErU05QejJZRGYwSGxTcXlTekhTbnlHM2FGLzVLT3pzMVlwOENaYjdKOHZiMzNmZms0RkRTWkxadDZLaFNIL204OFozTEVxd2I1SE94S01GWmdXM1lKL0loUndxdFZzWlVuRTFvZE01cDJQUWRXYUNHQTE1RlJsMDcyb0N3SXA5bVhzYXV5ZGZ3M3BrPSIsImsiOlsxODQsMSwyLDMsMCwxMjAsMTA3LDExOSwxNTMsMjMsMjIzLDExNywxODMsMTIwLDU3LDE5NiwxMSwyOCwyNDksMTE5LDEwNCwyMTMsMTY5LDE2MSwxNDEsMTQyLDk5LDY1LDQ5LDIxMiwzMCwxOTksOTcsMjA0LDIxOCw3NywxMDUsMTc5LDEsMTg0LDI0LDEwMyw3NywyMDEsMjE2LDk1LDkzLDkwLDg0LDQsMTc3LDEzNywxMzYsODQsMjQ4LDAsMCwwLDEyNiw0OCwxMjQsNiw5LDQyLDEzNCw3MiwxMzQsMjQ3LDEzLDEsNyw2LDE2MCwxMTEsNDgsMTA5LDIsMSwwLDQ4LDEwNCw2LDksNDIsMTM0LDcyLDEzNCwyNDcsMTMsMSw3LDEsNDgsMzAsNiw5LDk2LDEzNCw3MiwxLDEwMSwzLDQsMSw0Niw0OCwxNyw0LDEyLDIzNCwxOTAsMTY5LDM5LDg3LDE3LDE3NSwyMTksMjQxLDExNiwxNTMsMTQyLDIsMSwxNiwxMjgsNTksMTE2LDExMSwxNjYsMjQ2LDIwOSwxNzksNjgsMjAsMjE4LDIyNCw1OCwxMzYsNjUsMjAzLDE5NCw1MSwxNjAsMTQwLDIzNSwxNjAsMTMzLDExMCwxODIsMjI0LDEzMSw2MywxNTMsNTYsMTAyLDI0NywxOTAsODYsMTEsMTgzLDIxLDY5LDE3MSwxNzMsMjQxLDIzNSwxNTAsMTUzLDEyMCwzNywxNjMsMjIsMTA2LDE5MCwxMCw0LDc1LDI1MCwyMzQsNDAsMTY2LDk2LDUwLDE1MiwyMDFdfQ==",
+      "target": [
+        "development",
+        "preview",
+        "production"
+      ],
+      "configurationId": null,
+      "comment": "",
+      "customEnvironmentIds": [],
+      "id": "BHLME7fKYfi8bCUJ",
+      "key": "NEXT_PUBLIC_APP_URL",
+      "createdAt": 1776055120006,
+      "updatedAt": 1776055120006,
+      "createdBy": "rys6wpVpCiZtcEDmnU4KcZ1L",
+      "updatedBy": null,
+      "decrypted": false,
+      "lastEditedByDisplayName": "cainhohenriquess-2683"
+    },
+    {
+      "type": "encrypted",
+      "value": "eyJ2IjoidjIiLCJjIjoiYkdqbnlvSXE2WE9nZkorY3MwNzlCMnJPQ3ZnM2szL2MzaUdBaWpSK1p1R0ttZGkzZlhVY0huZjJham4vL0gza1R6bEt0KzgrZUtBWkQ4WjBvUm0rczc1QUFlZ1ZXeEgvalhIMEpHekZGck1abVdGV0dtMCtPOEZ2MXJnRUd5WU91d3N3T1c1UUZWOFJLL0M2dHlWdTRLamNTWThwZU9JcGc3TndjVUJTZTVsRFZicmZ3cldIcHRTeGV2SkJudmphbU1sQ0Z6aitveTUyNmVTSmpPWFFoVHgvbG14bmZFeWxNWXpidmJvTThQd3ZodHd5IiwiayI6WzE4NCwxLDIsMywwLDEyMCwxMDcsMTE5LDE1MywyMywyMjMsMTE3LDE4MywxMjAsNTcsMTk2LDExLDI4LDI0OSwxMTksMTA0LDIxMywxNjksMTYxLDE0MSwxNDIsOTksNjUsNDksMjEyLDMwLDE5OSw5NywyMDQsMjE4LDc3LDEwNSwxNzksMSw4MSwxNjYsMTg3LDE3OCwxMzYsMzAsMTMsODUsMjYsNTEsMjQxLDIxNiwxMTAsMTMyLDE0NCw4NywwLDAsMCwxMjYsNDgsMTI0LDYsOSw0MiwxMzQsNzIsMTM0LDI0NywxMywxLDcsNiwxNjAsMTExLDQ4LDEwOSwyLDEsMCw0OCwxMDQsNiw5LDQyLDEzNCw3MiwxMzQsMjQ3LDEzLDEsNywxLDQ4LDMwLDYsOSw5NiwxMzQsNzIsMSwxMDEsMyw0LDEsNDYsNDgsMTcsNCwxMiw4OCwyNTAsMjQ0LDMzLDYwLDIwMiwyNDEsMTI0LDExMywxNjksOTIsMTEyLDIsMSwxNiwxMjgsNTksNzgsMjA0LDEzOCw4MSw2OCwxMzYsMTc5LDQwLDE1NCwxMTYsODksMTcxLDI0NiwyMzYsMTcwLDE2LDIzOCw1OSw2MCwyMjIsMjUzLDksMTkyLDMyLDE0NiwzNywzNiw2LDEwNiwxNTksMTI1LDIzMCwxNDEsMjUwLDEyNiwyNiwyMTMsMTg2LDExOSwxNTMsMzMsMTMzLDY3LDU3LDE5NiwxODQsMjQwLDEzNywyMjAsNzYsMTM4LDE5Nyw1MSwxNDQsMTA3LDczLDM5LDE3LDUxXX0=",
+      "target": [
+        "development",
+        "preview",
+        "production"
+      ],
+      "configurationId": null,
+      "comment": "",
+      "customEnvironmentIds": [],
+      "id": "2RbydN9p020x4rje",
+      "key": "AUTH_SECRET",
+      "createdAt": 1776055084326,
+      "updatedAt": 1776055084326,
+      "createdBy": "rys6wpVpCiZtcEDmnU4KcZ1L",
+      "updatedBy": null,
+      "decrypted": false,
+      "lastEditedByDisplayName": "cainhohenriquess-2683"
+    },
+    {
+      "type": "encrypted",
+      "value": "eyJ2IjoidjIiLCJjIjoiMms2VFNKaXpYdEd2RlFIaE9XOGh2bS9LMnA3QlZaNGg5ZmU1b0lQdlRsTG92ZDdsS3pLRUQ0dzZEU21udEtrTjNQY2tYa1YyVElvdExVb3dQUFFBNWlSZ1A2K1RZT3BjbGV3SkdROU9QRVhWQU40cEhOTWdWM1liVm54VzZRVm1qcmZycXhuR2Y3UU9FaU9scmhZYUVpTHRFR3V0OUhicmZ4cmo4YldMUmpNei9xM1RnRE5mZzlNdWVsUlRPaXNjSzhQS0dnPT0iLCJrIjpbMTg0LDEsMiwzLDAsMTIwLDEwNywxMTksMTUzLDIzLDIyMywxMTcsMTgzLDEyMCw1NywxOTYsMTEsMjgsMjQ5LDExOSwxMDQsMjEzLDE2OSwxNjEsMTQxLDE0Miw5OSw2NSw0OSwyMTIsMzAsMTk5LDk3LDIwNCwyMTgsNzcsMTA1LDE3OSwxLDE4NCwyNCwxMDMsNzcsMjAxLDIxNiw5NSw5Myw5MCw4NCw0LDE3NywxMzcsMTM2LDg0LDI0OCwwLDAsMCwxMjYsNDgsMTI0LDYsOSw0MiwxMzQsNzIsMTM0LDI0NywxMywxLDcsNiwxNjAsMTExLDQ4LDEwOSwyLDEsMCw0OCwxMDQsNiw5LDQyLDEzNCw3MiwxMzQsMjQ3LDEzLDEsNywxLDQ4LDMwLDYsOSw5NiwxMzQsNzIsMSwxMDEsMyw0LDEsNDYsNDgsMTcsNCwxMiwyMzQsMTkwLDE2OSwzOSw4NywxNywxNzUsMjE5LDI0MSwxMTYsMTUzLDE0MiwyLDEsMTYsMTI4LDU5LDExNiwxMTEsMTY2LDI0NiwyMDksMTc5LDY4LDIwLDIxOCwyMjQsNTgsMTM2LDY1LDIwMywxOTQsNTEsMTYwLDE0MCwyMzUsMTYwLDEzMywxMTAsMTgyLDIyNCwxMzEsNjMsMTUzLDU2LDEwMiwyNDcsMTkwLDg2LDExLDE4MywyMSw2OSwxNzEsMTczLDI0MSwyMzUsMTUwLDE1MywxMjAsMzcsMTYzLDIyLDEwNiwxOTAsMTAsNCw3NSwyNTAsMjM0LDQwLDE2Niw5Niw1MCwxNTIsMjAxXX0=",
+      "target": [
+        "development",
+        "preview",
+        "production"
+      ],
+      "configurationId": null,
+      "comment": "",
+      "customEnvironmentIds": [],
+      "id": "g59jam5txAXJuq1D",
+      "key": "NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY",
+      "createdAt": 1776055043709,
+      "updatedAt": 1776055043709,
+      "createdBy": "rys6wpVpCiZtcEDmnU4KcZ1L",
+      "updatedBy": null,
+      "decrypted": false,
+      "lastEditedByDisplayName": "cainhohenriquess-2683"
+    },
+    {
+      "type": "encrypted",
+      "value": "eyJ2IjoidjIiLCJjIjoiZjMrVXJ4T0dYaVNaSjg1dWIrZTcwUWVNSjFja0ZhOTg0d3ZsVG55NzdRVFYrcnNYRVFHNFE0VG1QeDkwK3hJcGNzUzVYdU5KZ3J2Y2s1Ky9DelJUVmpuM1lXaVJoL3l1RjlZT04rNXFWWnhBN29sYXNWZUpyNk1mWjF1MERvL29TK3RBN0hsbFZCZFlncDhBQUJ6ZEVkcDBpSG90OWpZbjVlKzFlUm5vNUprVkFHbDlxeUorYVZpc2k0dz0iLCJrIjpbMTg0LDEsMiwzLDAsMTIwLDEwNywxMTksMTUzLDIzLDIyMywxMTcsMTgzLDEyMCw1NywxOTYsMTEsMjgsMjQ5LDExOSwxMDQsMjEzLDE2OSwxNjEsMTQxLDE0Miw5OSw2NSw0OSwyMTIsMzAsMTk5LDk3LDIwNCwyMTgsNzcsMTA1LDE3OSwxLDgxLDE2NiwxODcsMTc4LDEzNiwzMCwxMyw4NSwyNiw1MSwyNDEsMjE2LDExMCwxMzIsMTQ0LDg3LDAsMCwwLDEyNiw0OCwxMjQsNiw5LDQyLDEzNCw3MiwxMzQsMjQ3LDEzLDEsNyw2LDE2MCwxMTEsNDgsMTA5LDIsMSwwLDQ4LDEwNCw2LDksNDIsMTM0LDcyLDEzNCwyNDcsMTMsMSw3LDEsNDgsMzAsNiw5LDk2LDEzNCw3MiwxLDEwMSwzLDQsMSw0Niw0OCwxNyw0LDEyLDg4LDI1MCwyNDQsMzMsNjAsMjAyLDI0MSwxMjQsMTEzLDE2OSw5MiwxMTIsMiwxLDE2LDEyOCw1OSw3OCwyMDQsMTM4LDgxLDY4LDEzNiwxNzksNDAsMTU0LDExNiw4OSwxNzEsMjQ2LDIzNiwxNzAsMTYsMjM4LDU5LDYwLDIyMiwyNTMsOSwxOTIsMzIsMTQ2LDM3LDM2LDYsMTA2LDE1OSwxMjUsMjMwLDE0MSwyNTAsMTI2LDI2LDIxMywxODYsMTE5LDE1MywzMywxMzMsNjcsNTcsMTk2LDE4NCwyNDAsMTM3LDIyMCw3NiwxMzgsMTk3LDUxLDE0NCwxMDcsNzMsMzksMTcsNTFdfQ==",
+      "target": [
+        "development",
+        "preview",
+        "production"
+      ],
+      "configurationId": null,
+      "comment": "",
+      "customEnvironmentIds": [],
+      "id": "sdWpvmV1fstAKr1T",
+      "key": "NEXT_PUBLIC_SUPABASE_URL",
+      "createdAt": 1776055002746,
+      "updatedAt": 1776055002746,
+      "createdBy": "rys6wpVpCiZtcEDmnU4KcZ1L",
+      "updatedBy": null,
+      "decrypted": false,
+      "lastEditedByDisplayName": "cainhohenriquess-2683"
+    }
+  ]
+}

@@ -1,12 +1,12 @@
 "use client";
 
-import { LayoutGrid, PackageSearch, PlusSquare } from "lucide-react";
+import { Calculator, LayoutGrid, PackageSearch, PlusSquare } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NAV_ITEMS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
-const icons = [LayoutGrid, PackageSearch, PlusSquare];
+const icons = [LayoutGrid, PackageSearch, Calculator, PlusSquare];
 
 export function SidebarNav() {
   const pathname = usePathname();
